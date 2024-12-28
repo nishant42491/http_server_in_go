@@ -23,7 +23,7 @@ func handleConnection(c net.Conn) {
 
 	fmt.Println("Data recieved: ", string(recievedData))
 
-	httpresponseheader := "HTTP/1.1 200 OK\r\n \r\n"
+	httpresponseheader := "HTTP/1.1 200 OK\r\n\r\n"
 
 	//write the response header
 	_, err = c.Write([]byte(httpresponseheader))
